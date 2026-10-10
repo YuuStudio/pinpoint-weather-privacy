@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ピンポイント天気 プライバシーポリシー | Yuu Studio</title>
+<meta name="description" content="ピンポイント天気の位置情報、天気取得、保存・削除についてのプライバシーポリシーです。">
+<style>
+:root{color-scheme:light dark}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.9;background:#f4f7fa;color:#172b3a}main{max-width:850px;margin:0 auto;padding:40px 24px 64px;background:#fff}h1{font-size:clamp(1.55rem,4vw,2rem);line-height:1.5;margin:0}h2{font-size:1.2rem;margin:32px 0 12px;border-bottom:1px solid #cad6df;padding-bottom:8px}p{margin:12px 0;overflow-wrap:anywhere}a{color:#07599b;text-underline-offset:3px}a:focus-visible{outline:3px solid #e58c00;outline-offset:3px}header p,footer{color:#526471}footer{margin-top:36px;border-top:1px solid #cad6df;padding-top:20px}@media(prefers-color-scheme:dark){body{background:#101a22;color:#e3ebf0}main{background:#17252f}a{color:#8dccff}header p,footer{color:#b8c9d5}}@media(max-width:480px){main{padding:24px 18px 40px}}
+</style>
+</head>
+<body><main><header><h1>ピンポイント天気<br>プライバシーポリシー</h1><p>Yuu Studio · 施行日：2026年10月10日</p></header><section><h2>1. 提供者と目的</h2><p>Yuu Studioは、「ピンポイント天気」（以下、本アプリ）で、地域の選択、天気の表示、ウィジェット、データ更新に必要な情報を取り扱います。本アプリは無料で利用でき、広告、アクセス解析SDK、アプリ内課金を使用しません。利用者登録は必要ありません。</p></section>
+<section><h2>2. 位置情報と地域の選択</h2><p>「位置情報から取得」を選んだときに、Androidで許可された範囲の位置情報を取得します。正確な位置情報を許可しない場合でも、地域名・郵便番号による検索を利用できます。バックグラウンドで現在地を測位し続ける処理は行いません。</p>
+<p>現在地の地域名を表示するため、取得した座標をAndroidの地名変換サービス（Geocoder）へ渡します。端末の実装によっては外部サービスへ座標が送信されます。地名を取得できない場合も、取得した座標を天気の地点候補として扱います。</p>
+<p>地域名・郵便番号の検索はアプリ内の地点データで行い、検索語を天気APIへ送信しません。検索・直接入力・位置情報から選択した地点は、名称と座標を地域設定、選択履歴、ウィジェット設定として端末内に保存します。座標は小数点以下5桁で保存します。連続した移動経路を記録する機能はありません。</p></section>
+<section><h2>3. 天気取得のための外部送信</h2><p>選択した地点の緯度経度を、Open-MeteoのWeather Forecast API（api.open-meteo.com）へHTTPSで送信します。通信時にはIPアドレスやアプリの種類を示す通信ヘッダーも提供元へ伝わります。アカウントIDや広告IDを付けて送信する処理はありません。</p>
+<p>定期更新でも、アプリやウィジェットに保存された地点の座標を送信します。位置情報の権限を取り消しても、既に選択した地点の設定や定期更新が自動で削除・停止されるわけではありません。</p>
+<p>提供者が利用者の座標を受信する独自サーバーは、本アプリの現行構成では設けていません。ただし、Open-Meteoや地名変換サービスへの送信は発生します。</p>
+<p>Open-Meteoは、不正利用防止や障害調査のためにIPアドレス等や座標を含み得るサーバーログを保持すると説明しており、公式方針ではログを90日後に削除します。送信先での取り扱いは提供元の方針もご確認ください。</p>
+<p>Open-Meteoの利用条件・プライバシー：<a href="https://open-meteo.com/en/terms">https://open-meteo.com/en/terms</a></p>
+<p>Geocoderの送信先や保持条件は端末の実装に依存します。端末・地名変換サービスのプライバシー説明もご確認ください。</p></section>
+<section><h2>4. 端末内の保存とバックアップ</h2><p>地域設定、選択履歴、ウィジェット設定、表示設定、権限に関するアプリ設定、取得済みの天気を端末内に保存します。設定は変更・削除されるまで利用し、天気キャッシュは更新時などに書き換えます。キャッシュの一定日数での自動削除は保証していません。</p>
+<p>Androidのバックアップ・端末移行設定に応じて、地点やウィジェット設定等を含むsettings.xmlがOSのバックアップ対象となる場合があります。予報キャッシュと移行用控えはバックアップ対象として指定していません。OSのバックアップは端末やアカウントの設定で管理してください。再インストール時の復元は保証しません。</p></section>
+<section><h2>5. 削除・利用停止</h2><p>選択履歴はアプリ内で個別削除・全削除できます。履歴を削除しても、現在の設定地域やウィジェット設定は別に残ります。地域変更やウィジェットの削除によって必要な設定を管理できます。</p>
+<p>端末内のアプリデータをまとめて削除する場合は、Androidのアプリ設定からデータ消去、またはアンインストールを行ってください。OSのバックアップが残っている場合は復元される可能性があるため、必要に応じてOS側でも管理してください。</p>
+<p>端末での削除によって、外部サービスに既に送信されたログが直ちに削除されるものではありません。外部サービスでの削除は提供元の保持方針・手続きに従います。</p></section>
+<section><h2>6. ログと安全管理</h2><p>通常の公開版に、位置や利用状況を開発者へ自動送信する解析・クラッシュ収集SDKは組み込んでいません。更新処理等の動作ログが端末のシステムログに記録される場合があります。</p>
+<p>OSのアクセス制御とHTTPS通信を利用して情報を取り扱います。送信先サービスでの保存状態、地名変換サービスの通信方式など、提供者が直接管理できない部分まで一律に保証するものではありません。</p></section>
+<section><h2>7. お問い合わせと改定</h2><p>提供者：Yuu Studio</p>
+<p>プライバシーに関する連絡先：<a href="mailto:yuustudio7@gmail.com">yuustudio7@gmail.com</a></p>
+<p>お問い合わせ時に利用者が提供したメールアドレスや本文は、対応のために取り扱い、対応に必要な期間保持し、不要になった情報は削除します。不要な位置情報や機密情報を送らないでください。</p>
+<p>機能や情報の取り扱いを変更する場合は、本ポリシーを更新します。</p>
+<p>施行日：2026年10月10日</p></section>
+<section><h2>8. このページの配信</h2><p>本ページはGitHub Pagesで配信します。GitHubは本ページへのアクセス時にIPアドレスをセキュリティ目的で記録すると説明しています。本ページに広告・アクセス解析スクリプトや問い合わせフォームは設けていません。</p>
+<p>GitHubのプライバシー：<a href="https://docs.github.com/ja/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/ja/site-policy/privacy-policies/github-general-privacy-statement</a></p></section>
+<footer>© 2026 Yuu Studio</footer></main></body></html>
